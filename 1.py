@@ -1,6 +1,6 @@
 print("hello world")
 a = 4
-dd=9
+
 e = ("some name", 4, False)  # read only tuple
 jsonObj = {"name": "MyName", "age": 60}
 list22 = ["first one", "second element ", 44, [1, 2, 3]]
