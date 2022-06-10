@@ -11,7 +11,6 @@ def add_score(difficulty):
     difficulty_number =int(difficulty)
     points_of_winning = ( difficulty_number* 3) +5
     updated_score =  current_score_number + points_of_winning
-#     print(updated_score)
     set_score(updated_score)
 
 
