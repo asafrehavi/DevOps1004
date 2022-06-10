@@ -1,7 +1,9 @@
 import MemoryGame
 import GuessGame
 import CurrencyRouletteGame
+from  Score import add_score
 from Live import validate
+
 
 
 def get_game_level():
@@ -47,14 +49,19 @@ def welcome(name):
 
 
 def load_game():
+    is_win = False
     game_number = get_game_number()
     level = get_game_level()
     if game_number == '1':
-        MemoryGame.play(level)
+        is_win = MemoryGame.play(level)
     if game_number == '2':
-        GuessGame.play(level)
+        is_win = GuessGame.play(level)
     if game_number == '3':
-        CurrencyRouletteGame.play(level)
+       is_win = CurrencyRouletteGame.play(level)
+    if(is_win):
+       add_score(level)
+
+
 
 
 load_game()

@@ -12,8 +12,10 @@ def play(difficulty):
     is_guess_succeeded = compare_result(guess_from_user,secret_number)
     if is_guess_succeeded:
         print(f'win you guessed :{guess_from_user} ,random number :{secret_number} ')
+        return True
     else:
         print(f'lose you guessed :{guess_from_user} ,random number :{secret_number} ')
+        return False
 
 
 

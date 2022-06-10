@@ -34,6 +34,8 @@ def play(difficulty):
     print_result(lower, upper, guess_from_user)
     if lower <= guess_from_user <= upper:
         print('Win')
+        return True
     else:
         print('Lost')
+        return False
 

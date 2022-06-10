@@ -39,13 +39,15 @@ def is_list_equal(generate_seq,user_seq):
 
 def play(difficulty):
     generate_seq = generate_sequence(difficulty)
-    print(f'generated numbers :{generate_seq}')
+    print(f"generated numbers :{generate_seq}")
     wait(0.7)
     clear_screen()
     user_seq = get_list_from_user(difficulty)
     is_list_equal_p = is_list_equal( generate_seq,user_seq)
     if is_list_equal_p:
         print('Win')
+        return True
     else:
         print('Lost')
+        return False
 
